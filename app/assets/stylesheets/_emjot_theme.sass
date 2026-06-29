@@ -14,63 +14,63 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700')
 
 body
-  font-family: 'Open Sans', sans-serif
-  font-weight: normal
+  font-family: 'Open Sans', sans-serif !important
+  font-weight: normal !important
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
-  font-weight: bold
+  font-weight: bold !important
 
 .panel-heading a
   &:hover, &:focus
-    text-decoration: none
-    cursor: pointer
+    text-decoration: none !important
+    cursor: pointer !important
 
 .list-group-item
-  border: none
-  padding: 8px 8px
+  border: none !important
+  padding: 8px 8px !important
   &:nth-child(odd)
-    background-color: $list-group-bg-alternate
+    background-color: $list-group-bg-alternate !important
 
 form label.label, label, .label, th
-  font-weight: 600
+  font-weight: 600 !important
 
 .progress-striped .progress-bar, .progress-bar-striped
   +gradient-striped($steel)
-  box-shadow: none
+  box-shadow: none !important
 
 .progress
-  box-shadow: none
+  box-shadow: none !important
 
 .inline-hints
-  padding-top: 5px
-  color: $steel-dark
-  font-weight: 600
+  padding-top: 5px !important
+  color: $steel-dark !important
+  font-weight: 600 !important
 
 //Dashboard
 
 #main_content .index_grid
   > tbody > tr > td
-    border: none
+    border: none !important
     &:first-child
-      padding-left: 0
+      padding-left: 0 !important
     &:last-child
-      padding-right: 0
+      padding-right: 0 !important
   .panel
-    margin-bottom: 0
-    min-width: 280px
+    margin-bottom: 0 !important
+    min-width: 280px !important
 
 .btn:active
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.05)
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.05) !important
 
 .dropdown-menu
-  box-shadow: none
+  box-shadow: none !important
   > li > a
-    padding: $padding-base-vertical $padding-base-horizontal
+    padding: $padding-base-vertical $padding-base-horizontal !important
 
 .dropup .caret
-  margin-bottom: 4px
+  margin-bottom: 4px !important
 
 .member_link, .ui-sortable-handle
-  padding: 4px 0 6px
+  padding: 4px 0 6px !important
   &:before
-    font-size: 16px
+    font-size: 16px !important

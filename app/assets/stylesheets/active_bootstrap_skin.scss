@@ -16,13 +16,13 @@
 // apply bootstrap pagination style to .pagination
 .pagination {
   > span {
-    position: relative;
-    float: left;
-    padding: $padding-base-vertical $padding-base-horizontal;
-    line-height: $line-height-base;
-    background-color: $pagination-bg;
-    border: 1px solid $pagination-border;
-    margin-left: -1px;
+    position: relative !important;
+    float: left !important;
+    padding: $padding-base-vertical $padding-base-horizontal !important;
+    line-height: $line-height-base !important;
+    background-color: $pagination-bg !important;
+    border: 1px solid $pagination-border !important;
+    margin-left: -1px !important;
 
     &:first-child {
       @include border-left-radius($border-radius-base);
@@ -34,21 +34,21 @@
 
     &:hover,
     &:focus {
-      z-index: 2;
-      color: $pagination-hover-color;
-      background-color: $pagination-hover-bg;
-      border-color: $pagination-hover-border;
+      z-index: 2 !important;
+      color: $pagination-hover-color !important;
+      background-color: $pagination-hover-bg !important;
+      border-color: $pagination-hover-border !important;
     }
 
     &.current {
       &,
       &:hover,
       &:focus {
-        z-index: 3;
-        color: $pagination-active-color;
-        background-color: $pagination-active-bg;
-        border-color: $pagination-active-border;
-        cursor: default;
+        z-index: 3 !important;
+        color: $pagination-active-color !important;
+        background-color: $pagination-active-bg !important;
+        border-color: $pagination-active-border !important;
+        cursor: default !important;
       }
     }
 
@@ -56,19 +56,19 @@
       &,
       &:hover,
       &:focus {
-        color: $pagination-disabled-color;
-        background-color: $pagination-disabled-bg;
-        border-color: $pagination-disabled-border;
-        cursor: $cursor-disabled;
+        color: $pagination-disabled-color !important;
+        background-color: $pagination-disabled-bg !important;
+        border-color: $pagination-disabled-border !important;
+        cursor: $cursor-disabled !important;
       }
     }
 
     a {
-      color: $pagination-color;
+      color: $pagination-color !important;
 
       &:hover,
       &:focus {
-        text-decoration: none;
+        text-decoration: none !important;
       }
     }
   }
@@ -81,11 +81,11 @@
   > h3 {
     @extend .panel-heading;
 
-    padding-top: 7px;
-    margin: 0;
+    padding-top: 7px !important;
+    margin: 0 !important;
 
     a {
-      color: $panel-default-text;
+      color: $panel-default-text !important;
     }
   }
 }
@@ -96,7 +96,7 @@
 
 .flash {
   @extend .alert;
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .flash_alert {
@@ -108,26 +108,26 @@
 }
 
 #error_explanation {
-  color: $state-danger-text;
+  color: $state-danger-text !important;
   h2 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 }
 
 .inline-errors {
-  color: $state-danger-text;
+  color: $state-danger-text !important;
 }
 
 #login {
-  max-width: 400px;
-  padding: 15px;
-  margin: 0 auto;
+  max-width: 400px !important;
+  padding: 15px !important;
+  margin: 0 auto !important;
 
   #admin_user_remember_me {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-right: 10px;
+    width: 12px !important;
+    height: 12px !important;
+    display: inline-block !important;
+    margin-right: 10px !important;
   }
 
   #admin_user_submit_action,
@@ -140,52 +140,52 @@
 #header {
   @extend .navbar;
   @extend .navbar-inverse;
-  border-radius: 0;
+  border-radius: 0 !important;
 
   .mobile {
-    display: none;
+    display: none !important;
   }
 
   @media (max-width: 768px) {
     .button_mobile_burger {
-      margin-top: 0;
+      margin-top: 0 !important;
     }
 
     #site_title {
-      float: left;
+      float: left !important;
     }
 
     #utility_nav {
-      display: none;
+      display: none !important;
     }
 
     #tabs {
-      clear: both;
+      clear: both !important;
     }
 
     .mobile {
-      display: block;
+      display: block !important;
     }
 
     .header-item.tabs {
-      margin: 7.5px 0;
+      margin: 7.5px 0 !important;
     }
 
     #utility_nav {
-      float: none;
+      float: none !important;
     }
   }
 
   @media (min-width: 769px) {
     #utility_nav {
-      float: right;
+      float: right !important;
     }
   }
 
   #site_title {
     @extend .navbar-brand;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .header-item.tabs {
@@ -204,7 +204,7 @@
 
 #title_bar {
   @extend .clearfix;
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 
   #titlebar_left {
     @extend .pull-left;
@@ -231,7 +231,7 @@
     }
 
     select[multiple] {
-      height: auto;
+      height: auto !important;
     }
   }
 
@@ -250,14 +250,14 @@
 /* Main Content */
 #active_admin_content {
   @extend .row;
-  margin: 0;
-  padding-bottom: 30px;
+  margin: 0 !important;
+  padding-bottom: 30px !important;
 
   &.without_sidebar {
     #main_content_wrapper {
       @extend .col-md-6;
-      width: auto;
-      min-width: 100%;
+      width: auto !important;
+      min-width: 100% !important;
     }
   }
 
@@ -271,23 +271,23 @@
   }
 
   table {
-    width: auto;
+    width: auto !important;
   }
 }
 
 #main_content_wrapper {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
   /* make extra wide content accessible */
-  overflow-x: auto;
+  overflow-x: auto !important;
 
   .member_link {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
   input[type="checkbox"] {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin-right: 10px;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 10px !important;
   }
 }
 
@@ -297,9 +297,9 @@
 
 ul.scopes {
   li.scope {
-    display: inline-block;
-    list-style-type: none;
-    margin-bottom: 4px;
+    display: inline-block !important;
+    list-style-type: none !important;
+    margin-bottom: 4px !important;
   }
   li.scope a {
     @extend .btn;
@@ -313,43 +313,43 @@ ul.scopes {
 /* breadcrumb */
 .breadcrumb {
   /* the typical bootstrap look for .breadcrumb does not fit in the active admin layout */
-  padding: 0;
-  border-radius: 0;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
 #ui-datepicker-div {
-  background: white;
-  padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
+  background: white !important;
+  padding: 5px !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 5px !important;
   .ui-datepicker-calendar {
     th,
     td {
-      width: 30px;
-      height: 30px;
-      text-align: center;
+      width: 30px !important;
+      height: 30px !important;
+      text-align: center !important;
       &:hover {
-        background: #eeeeee;
-        cursor: pointer;
+        background: #eeeeee !important;
+        cursor: pointer !important;
       }
     }
   }
 
   .ui-datepicker-prev {
-    float: left;
+    float: left !important;
   }
 
   .ui-datepicker-next {
-    float: right;
+    float: right !important;
   }
 
   .ui-datepicker-today {
-    font-weight: bold;
+    font-weight: bold !important;
   }
 
   .ui-datepicker-title {
-    text-align: center;
-    font-weight: bold;
+    text-align: center !important;
+    font-weight: bold !important;
   }
 }
 
@@ -368,13 +368,13 @@ ul.scopes {
 
 #main_content_wrapper .table_actions {
   @extend .btn-toolbar;
-  min-width: 117px;
+  min-width: 117px !important;
 
   > .member_link {
-    margin: (-3px) 10px 0 0;
+    margin: (-3px) 10px 0 0 !important;
 
     &:last-child {
-      margin-right: 0;
+      margin-right: 0 !important;
     }
   }
 }
@@ -384,19 +384,19 @@ ul.scopes {
   @extend .btn;
   @extend .btn-default;
   @extend .glyphicon;
-  font-size: 0;
-  text-align: center;
-  padding: 3px 0;
-  width: 28px;
+  font-size: 0 !important;
+  text-align: center !important;
+  padding: 3px 0 !important;
+  width: 28px !important;
 
   &:before {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 
 .ui-sortable-handle {
   @extend .glyphicon-sort;
-  cursor: all-scroll;
+  cursor: all-scroll !important;
 }
 
 .view_link {
@@ -418,8 +418,8 @@ form {
   .inputs,
   .actions {
     ol {
-      padding-left: 0;
-      list-style: none;
+      padding-left: 0 !important;
+      list-style: none !important;
     }
   }
 
@@ -434,14 +434,14 @@ form {
       }
 
       select[multiple] {
-        height: auto;
+        height: auto !important;
       }
     }
   }
 
   .actions {
     li {
-      display: inline-block;
+      display: inline-block !important;
 
       input,
       a {
@@ -455,41 +455,41 @@ form {
   }
 
   .actions li {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 
   label.label {
     /* The label class has a different meaning in bootstrap */
-    display: inline-block;
-    font-weight: bold;
+    display: inline-block !important;
+    font-weight: bold !important;
 
-    padding: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-    text-align: inherit;
-    white-space: inherit;
-    vertical-align: inherit;
-    border-radius: inherit;
+    padding: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    text-align: inherit !important;
+    white-space: inherit !important;
+    vertical-align: inherit !important;
+    border-radius: inherit !important;
   }
 
   &.formtastic .errors {
-    color: $state-danger-text;
+    color: $state-danger-text !important;
   }
 }
 
 /* Footer */
 #footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background-color: #9da5a4;
+  padding-top: 30px !important;
+  padding-bottom: 20px !important;
+  background-color: #9da5a4 !important;
 }
 
 legend.label {
   @extend legend;
-  text-align: left;
-  border-radius: 0;
-  margin-bottom: 10px;
+  text-align: left !important;
+  border-radius: 0 !important;
+  margin-bottom: 10px !important;
 }
 
 /* Display of checkboxes and radios */
@@ -501,11 +501,11 @@ legend.label {
 .check_boxes,
 .radio {
   label {
-    font-weight: normal;
+    font-weight: normal !important;
   }
 
   legend label {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
@@ -519,8 +519,8 @@ legend.label {
 /* table_tools */
 
 .table_tools {
-  overflow: hidden;
-  margin-bottom: 10px;
+  overflow: hidden !important;
+  margin-bottom: 10px !important;
 
   .batch_actions_selector {
     .dropdown_menu_button {
@@ -528,23 +528,23 @@ legend.label {
       @extend .btn-default;
       @extend .dropdown-toggle;
       &:after {
-        margin-left: 0.4em;
-        content: "";
+        margin-left: 0.4em !important;
+        content: "" !important;
         @extend .caret;
       }
     }
 
     .dropdown_menu_list {
       @extend .dropdown-menu;
-      display: block;
-      top: auto;
-      left: auto;
+      display: block !important;
+      top: auto !important;
+      left: auto !important;
     }
   }
 
   .table_tools_segmented_control {
     @extend .btn-group;
-    margin: 0 0 0 1px;
+    margin: 0 0 0 1px !important;
   }
 
   .index {
@@ -552,11 +552,11 @@ legend.label {
     @extend .btn-default;
 
     a {
-      color: $btn-default-color;
+      color: $btn-default-color !important;
 
       &:hover,
       &:focus {
-        text-decoration: none;
+        text-decoration: none !important;
       }
     }
 
@@ -570,33 +570,33 @@ legend.label {
 // style filter form
 .filter_form {
   input {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 
   label input {
-    margin-top: 5px;
+    margin-top: 5px !important;
   }
 
   .buttons {
     input,
     a {
-      margin-right: 5px;
+      margin-right: 5px !important;
     }
 
     a {
-      margin-top: 10px;
+      margin-top: 10px !important;
     }
   }
 
   .filter_form_field,
   form .inputs li {
     select[multiple] {
-      height: auto;
+      height: auto !important;
     }
 
     input[type="radio"] {
-      height: auto;
-      width: auto;
+      height: auto !important;
+      width: auto !important;
     }
   }
 }

@@ -1,5 +1,5 @@
-@import "emjot_variables";
-@import "bootstrap";
+@use "sass:meta";
+@use "active_bootstrap_skin_core" as *;
 
 /* set horizontal padding on all content containers */
 #title_bar,
@@ -601,4 +601,4 @@ legend.label {
   }
 }
 
-@import "emjot_theme";
+@include meta.load-css("emjot_theme");

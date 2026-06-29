@@ -1,4 +1,5 @@
-@import themify_map
+@use "sass:map"
+@use "themify_map"
 
 @mixin font_face($family, $path, $svg, $weight: normal, $style: normal)
   @font-face
@@ -15,9 +16,16 @@
 
 @mixin themify_icon($th-name, $size:inherit)
   &:before
-    @extend .glyphicon
+    position: relative
+    top: 1px
+    display: inline-block
     font-family: "Themify"
-    content: map-get($themify-character-map, $th-name)
+    font-style: normal
+    font-weight: 400
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    content: map.get(themify_map.$themify-character-map, $th-name)
     font-size: $size
 
 +font-face('Themify', 'themify', 'themify')

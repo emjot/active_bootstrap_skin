@@ -1,3 +1,5 @@
+@use "sass:color"
+
 //additional
 $white: #FFFFFF
 $black: #000000
@@ -30,8 +32,8 @@ $addon-disabled-bg: rgba($steel, 0.4)
 
 $footer-color: $gray-dark
 
-$toggle-active-bg: mix($steel-dark, $grass, 35%)
-$toggle-inactive-bg: mix($steel-dark, $poppy, 35%)
+$toggle-active-bg: color.mix($steel-dark, $grass, $weight: 35%)
+$toggle-inactive-bg: color.mix($steel-dark, $poppy, $weight: 35%)
 
 // bootstrap
 $grid-gutter-width: 20px

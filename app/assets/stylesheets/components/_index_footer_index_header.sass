@@ -1,3 +1,5 @@
+@use "../active_bootstrap_skin_core" as *
+
 #index_footer, #index_header
   width: 100%
   clear: both
@@ -10,7 +12,7 @@
     clear: right
   .pagination_information, .download_links
     padding-top: 4px
-    @extend .text-muted
+    color: $text-muted
   .download_links
     float: left
 

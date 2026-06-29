@@ -1,7 +1,7 @@
 // Compatibility helper functions for sprockets in conjunction with dartsass-rails.
 //
-// If you use dartsass-rails, add '@import "bootstrap-sprockets-dartsass";'
-// before you import bootstrap (i.e. in this case before you import active_bootstrap_skin).
+// If you use dartsass-rails, add '@use "bootstrap-sprockets-dartsass";'
+// before you use active_bootstrap_skin.
 //
 // These helpers work similar to the "bootstrap-sprockets" helpers but differ in the way that
 // dartsass-rails can't process "asset-path()" and similar functions; it relies

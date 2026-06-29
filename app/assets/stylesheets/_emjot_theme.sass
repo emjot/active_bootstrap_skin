@@ -1,3 +1,8 @@
+@use "active_bootstrap_skin_core" as *
+@use "emjot_mods"
+@use "themify_icons"
+@use "components/all"
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6,9 +11,7 @@
 //
 // Load core variables and mixins
 // --------------------------------------------------
-@import emjot_mods
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700')
-@import themify_icons
 
 body
   font-family: 'Open Sans', sans-serif
@@ -71,5 +74,3 @@ form label.label, label, .label, th
   padding: 4px 0 6px
   &:before
     font-size: 16px
-
-@import 'components/all'

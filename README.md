@@ -21,7 +21,7 @@ gem 'active_bootstrap_skin',
 
 - Don't forget you have to config the [bootstraps-sass](https://github.com/twbs/bootstrap-sass#a-ruby-on-rails) first.
 
-- In the `active_admin.scss` file, you include `active_bootstrap_skin`. If you use dartsass-rails, you will also need to include `bootstrap-sprockets-dartsass` before (and your sprockets-rails gem version is expected to be >= 3.4.2). **Note: You have to comment out or remove the active admin stylesheets.**
+- In the `active_admin.scss` file, use `active_bootstrap_skin`. If you use dartsass-rails, include `bootstrap-sprockets-dartsass` before it (and your sprockets-rails gem version is expected to be >= 3.4.2). **Note: You have to comment out or remove the active admin stylesheets.**
 
 ```scss
 // Active Admin's got SASS!
@@ -29,8 +29,8 @@ gem 'active_bootstrap_skin',
 // @import "active_admin/base";
 
 // Active Bootstrap
-@import "bootstrap-sprockets-dartsass"; // <-- add this line if you use dartsass-rails
-@import "active_bootstrap_skin";
+@use "bootstrap-sprockets-dartsass"; // <-- add this line if you use dartsass-rails
+@use "active_bootstrap_skin";
 ```
 
 - In the `active_admin.js` file, you require `active_bootstrap_skin`.

@@ -1,6 +1,6 @@
 @use "emjot_variables" as emjot;
 
-@forward "bootstrap" with (
+@forward "../../../vendor/assets/stylesheets/bootstrap" with (
   $grid-gutter-width: emjot.$grid-gutter-width,
   $breadcrumb-bg: emjot.$breadcrumb-bg,
   $panel-heading-padding: emjot.$panel-heading-padding,

@@ -1,6 +1,6 @@
 @use "emjot_variables" as emjot;
 
-@forward "bootstrap_vendor/bootstrap_expanded" with (
+@forward "bootstrap_vendor/bootstrap/foundation" with (
   $grid-gutter-width: emjot.$grid-gutter-width,
   $breadcrumb-bg: emjot.$breadcrumb-bg,
   $panel-heading-padding: emjot.$panel-heading-padding,
@@ -59,3 +59,5 @@
   $navbar-inverse-toggle-hover-bg: emjot.$navbar-inverse-toggle-hover-bg,
   $navbar-inverse-toggle-border-color: emjot.$navbar-inverse-toggle-border-color
 );
+
+@forward "bootstrap_vendor/bootstrap";

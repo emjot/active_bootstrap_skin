@@ -1,3 +1,5 @@
+@use "foundation" as *;
+
 //
 // Button groups
 // --------------------------------------------------
@@ -93,20 +95,69 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-xs > .btn { @extend .btn-xs; }
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+.btn-group-xs > .btn,
+.btn-group-xs > .member_link,
+.btn-group-xs > .ui-sortable-handle,
+.btn-group-xs > .dropdown_menu_button,
+.btn-group-xs > input,
+.btn-group-xs > a {
+  @include button-size(
+    $padding-xs-vertical,
+    $padding-xs-horizontal,
+    $font-size-small,
+    $line-height-small,
+    $btn-border-radius-small
+  );
+}
+.btn-group-sm > .btn,
+.btn-group-sm > .member_link,
+.btn-group-sm > .ui-sortable-handle,
+.btn-group-sm > .dropdown_menu_button,
+.btn-group-sm > input,
+.btn-group-sm > a {
+  @include button-size(
+    $padding-small-vertical,
+    $padding-small-horizontal,
+    $font-size-small,
+    $line-height-small,
+    $btn-border-radius-small
+  );
+}
+.btn-group-lg > .btn,
+.btn-group-lg > .member_link,
+.btn-group-lg > .ui-sortable-handle,
+.btn-group-lg > .dropdown_menu_button,
+.btn-group-lg > input,
+.btn-group-lg > a {
+  @include button-size(
+    $padding-large-vertical,
+    $padding-large-horizontal,
+    $font-size-large,
+    $line-height-large,
+    $btn-border-radius-large
+  );
+}
 
 
 // Split button dropdowns
 // ----------------------
 
 // Give the line between buttons some depth
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle,
+.btn-group > .member_link + .dropdown-toggle,
+.btn-group > .ui-sortable-handle + .dropdown-toggle,
+.btn-group > .dropdown_menu_button + .dropdown-toggle,
+.btn-group > input + .dropdown-toggle,
+.btn-group > a + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px;
 }
-.btn-group > .btn-lg + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle,
+.btn-group-lg > .member_link + .dropdown-toggle,
+.btn-group-lg > .ui-sortable-handle + .dropdown-toggle,
+.btn-group-lg > .dropdown_menu_button + .dropdown-toggle,
+.btn-group-lg > input + .dropdown-toggle,
+.btn-group-lg > a + .dropdown-toggle {
   padding-right: 12px;
   padding-left: 12px;
 }
@@ -128,12 +179,22 @@
   margin-left: 0;
 }
 // Carets in other button sizes
-.btn-lg .caret {
+.btn-lg .caret,
+.btn-group-lg > .member_link .caret,
+.btn-group-lg > .ui-sortable-handle .caret,
+.btn-group-lg > .dropdown_menu_button .caret,
+.btn-group-lg > input .caret,
+.btn-group-lg > a .caret {
   border-width: $caret-width-large $caret-width-large 0;
   border-bottom-width: 0;
 }
 // Upside down carets for .dropup
-.dropup .btn-lg .caret {
+.dropup .btn-lg .caret,
+.dropup .btn-group-lg > .member_link .caret,
+.dropup .btn-group-lg > .ui-sortable-handle .caret,
+.dropup .btn-group-lg > .dropdown_menu_button .caret,
+.dropup .btn-group-lg > input .caret,
+.dropup .btn-group-lg > a .caret {
   border-width: 0 $caret-width-large $caret-width-large;
 }
 

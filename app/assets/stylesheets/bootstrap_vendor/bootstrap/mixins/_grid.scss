@@ -1,4 +1,7 @@
+@use "../variables" as *;
+@use "clearfix";
 @use "sass:math";
+
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -9,14 +12,14 @@
   padding-left: math.floor(math.div($gutter, 2));
   margin-right: auto;
   margin-left: auto;
-  @include clearfix;
+  @include clearfix.clearfix;
 }
 
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-right: math.floor(math.div($gutter, -2));
   margin-left: math.ceil(math.div($gutter, -2));
-  @include clearfix;
+  @include clearfix.clearfix;
 }
 
 // Generate the extra small columns

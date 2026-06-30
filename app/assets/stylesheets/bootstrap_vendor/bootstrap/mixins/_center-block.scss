@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 // Center-align a block level element
 
 @mixin center-block() {

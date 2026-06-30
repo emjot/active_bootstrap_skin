@@ -1,6 +1,8 @@
+@use "foundation" as *;
+@use "forms";
 @use "sass:color";
-
 @use "sass:math";
+
 //
 // Navbars
 // --------------------------------------------------
@@ -294,7 +296,7 @@
   @include box-shadow($shadow);
 
   // Mixin behavior for optimum display
-  @include form-inline;
+  @include forms.form-inline;
 
   .form-group {
     @media (max-width: $grid-float-breakpoint-max) {

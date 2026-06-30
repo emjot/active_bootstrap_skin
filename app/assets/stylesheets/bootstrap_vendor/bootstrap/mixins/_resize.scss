@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 // Resize anything
 
 @mixin resizable($direction) {

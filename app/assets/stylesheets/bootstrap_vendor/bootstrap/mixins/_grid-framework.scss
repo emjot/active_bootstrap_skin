@@ -1,4 +1,6 @@
+@use "../variables" as *;
 @use "sass:math";
+
 // Framework grid generation
 //
 // Used only by Bootstrap to generate the correct number of grid classes given

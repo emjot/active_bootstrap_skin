@@ -42,6 +42,24 @@ gem 'active_bootstrap_skin',
 //= require active_bootstrap_skin
 ```
 
+## Testing
+
+Compile the skin the same way a consuming app would (Dart Sass via `sass-embedded`):
+
+```bash
+bundle install
+bundle exec rake test
+```
+
+Optional:
+
+```bash
+bundle exec rake compile                       # write CSS to tmp/compile/
+FATAL_DEPRECATIONS=1 bundle exec rake test     # fail on Sass deprecation warnings
+```
+
+CI runs `rake test` on pull requests and on pushes to `emjot` (Ruby 3.2 and 3.3).
+
 ## Screens
 
 ![Login](https://cloud.githubusercontent.com/assets/1997137/14111523/49c1e80c-f5f5-11e5-9fd4-d1700428b167.png)

@@ -1,2 +1,4 @@
 require "bundler/gem_tasks"
-task :default => :spec
+load "lib/tasks/compile.rake"
+
+task default: :test

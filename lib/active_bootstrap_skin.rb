@@ -6,6 +6,7 @@ module ActiveBootstrapSkin
       config.assets.precompile << '*.svg'
       config.assets.precompile << '*.eot'
       config.assets.precompile << '*.ttf'
+      config.assets.precompile << '*.woff2'
       config.assets.precompile << '*.woff'
     end
   end

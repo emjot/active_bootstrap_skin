@@ -1,0 +1,15 @@
+@use "../variables" as *;
+@use "sass:color";
+
+// Contextual backgrounds
+
+// [converter] $parent hack
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color;
+  }
+  a#{$parent}:hover,
+  a#{$parent}:focus {
+    background-color: color.adjust($color, $lightness: -10%, $space: hsl);
+  }
+}

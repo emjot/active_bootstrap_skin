@@ -2,26 +2,23 @@
 
 Bootstrap skin for Active Admin.
 
+This fork vendors Bootstrap 3.4.1 SCSS directly into the gem (no `bootstrap-sass` dependency) and uses the modern Sass module system (`@use` / `@forward`) for compatibility with dartsass-rails.
+
 ## Installation
 
-- Add the gem to your Gemfile:
+Add the gem to your Gemfile:
 
-```
-# Note: The gem requires the bootstrap-sass gem, but without sassc - so add this emjot fork/branch to the Gemfile:
-gem 'bootstrap-sass',
-  git:    'https://github.com/emjot/bootstrap-sass',
-  branch: 'remove-sassc'
-
-gem 'active_bootstrap_skin', 
+```ruby
+gem 'active_bootstrap_skin',
   git:    'https://github.com/emjot/active_bootstrap_skin',
-  branch: 'emjot' # or e.g. "tag: 'emjot-2.3.1'"
+  branch: 'emjot' # or e.g. tag: 'emjot-3.0.0'
 ```
+
+`bootstrap-sass` is **not** required — Bootstrap styles are included in this gem.
 
 ## Usage
 
-- Don't forget you have to config the [bootstraps-sass](https://github.com/twbs/bootstrap-sass#a-ruby-on-rails) first.
-
-- In the `active_admin.scss` file, you include `active_bootstrap_skin`. If you use dartsass-rails, you will also need to include `bootstrap-sprockets-dartsass` before (and your sprockets-rails gem version is expected to be >= 3.4.2). **Note: You have to comment out or remove the active admin stylesheets.**
+In `active_admin.scss`, use `active_bootstrap_skin`. If you use dartsass-rails, include `bootstrap-sprockets-dartsass` before it (sprockets-rails >= 3.4.2 is expected). **Comment out or remove the default Active Admin stylesheets.**
 
 ```scss
 // Active Admin's got SASS!
@@ -29,18 +26,38 @@ gem 'active_bootstrap_skin',
 // @import "active_admin/base";
 
 // Active Bootstrap
-@import "bootstrap-sprockets-dartsass"; // <-- add this line if you use dartsass-rails
-@import "active_bootstrap_skin";
+@use "bootstrap-sprockets-dartsass"; // only if you use dartsass-rails
+@use "active_bootstrap_skin";
 ```
 
-- In the `active_admin.js` file, you require `active_bootstrap_skin`.
+In `active_admin.js`, require `active_bootstrap_skin` for the mobile nav toggle. Bootstrap's JavaScript is **not** required.
 
 ```javascript
 //= require active_admin/base
-//= require bootstrap-sprockets
-
 //= require active_bootstrap_skin
 ```
+
+## Upgrading
+
+Upgrading from `emjot-2.3.2`? See [UPGRADING-emjot-3.0.md](UPGRADING-emjot-3.0.md).
+
+## Testing
+
+For gem development, compile the skin the same way a consuming app would (Dart Sass via `sass-embedded`):
+
+```bash
+bundle install
+bundle exec rake test
+```
+
+Optional:
+
+```bash
+bundle exec rake compile                       # write CSS to tmp/compile/
+FATAL_DEPRECATIONS=1 bundle exec rake test     # fail on Sass deprecation warnings
+```
+
+CI runs `rake test` on pull requests and on pushes to `emjot` (Ruby 3.2 and 3.3).
 
 ## Screens
 
@@ -53,4 +70,3 @@ gem 'active_bootstrap_skin',
 ![Admin viewport](https://cloud.githubusercontent.com/assets/1997137/15280259/d47272f4-1b58-11e6-86e8-b35836557890.png)
 
 ![Admin dropdown](https://cloud.githubusercontent.com/assets/1997137/15280303/57980aea-1b59-11e6-9cda-b58573a03f84.png)
-

@@ -1,59 +1,60 @@
 @use "sass:math"
+@use "../active_bootstrap_skin_core" as *
 
 // Mixin for Default Switch Styles
 // Variables: $size, $margin, $color, $bg, $active-bg, $font-size
 @mixin toggle-size($size: 24px)
-  height: $size
-  width: $size * 2
-  border-radius: $size
+  height: $size !important
+  width: $size * 2 !important
+  border-radius: $size !important
 
   &:focus,
   &.focus
     &,
     &.active
-      outline: none
+      outline: none !important
 
   > .btn-toggle-handle
-    top: math.div($size * 0.25, 2) - 1px
-    left: math.div($size * 0.25, 2) - 1px
-    width: $size * 0.75
-    height: $size * 0.75
-    border-radius: $size * 0.75
+    top: math.div($size * 0.25, 2) - 1px !important
+    left: math.div($size * 0.25, 2) - 1px !important
+    width: $size * 0.75 !important
+    height: $size * 0.75 !important
+    border-radius: $size * 0.75 !important
 
   &.active > .btn-toggle-handle
-    left: $size + math.div($size * 0.25, 2) - 1px
+    left: $size + math.div($size * 0.25, 2) - 1px !important
 
 .btn-toggle
   @extend .btn-default
-  background: $toggle-inactive-bg
-  padding: 0
-  position: relative
+  background: $toggle-inactive-bg !important
+  padding: 0 !important
+  position: relative !important
 
   &:focus,
   &.focus
     &,
     &.active
-      outline: none
+      outline: none !important
 
   > .btn-toggle-handle
     @extend .btn
     @extend .btn-default
-    position: absolute
-    transition: left 0.25s
+    position: absolute !important
+    transition: left 0.25s !important
 
   &.active
-    background-color: $toggle-active-bg
-    border-color: $btn-default-border
-    transition: background-color 0.25s
+    background-color: $toggle-active-bg !important
+    border-color: $btn-default-border !important
+    transition: background-color 0.25s !important
     > .btn-toggle-handle
-      transition: left 0.25s
+      transition: left 0.25s !important
 
   +toggle-size()
 
 // Apply Mixin to different sizes & colors
 .btn-toggle
   .index_table &
-    margin: -1px 20px 0 0
+    margin: -1px 20px 0 0 !important
 
   &.btn-lg
     +toggle-size(40px)

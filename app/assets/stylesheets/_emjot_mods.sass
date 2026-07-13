@@ -1,62 +1,64 @@
+@use "active_bootstrap_skin_core" as *
+
 #header
-  z-index: 1
+  z-index: 1 !important
   @media (max-width: 768px)
     // modify responsive behaviour to work with min-width content
     #utility_nav
-      display: block
-      clear: both
+      display: block !important
+      clear: both !important
       > li
-        float: left
+        float: left !important
     .header-item.tabs.mobile
-      float: left
+      float: left !important
       margin:
-        left: 10px
-        right: 10px
+        left: 10px !important
+        right: 10px !important
       .button_mobile_burger
-        margin: 0
-      margin: 10px
+        margin: 0 !important
+      margin: 10px !important
 
 .panel .container
-  padding: 0
-  width: 100%
+  padding: 0 !important
+  width: 100% !important
 
 #wrapper
-  margin: 0 auto
-  overflow: hidden
-  max-width: 1600px
-  min-width: 970px
+  margin: 0 auto !important
+  overflow: hidden !important
+  max-width: 1600px !important
+  min-width: 970px !important
 
 #active_admin_content
   &.with_sidebar
-    display: flex
+    display: flex !important
     #sidebar
-      flex: 0 0 280px
+      flex: 0 0 280px !important
     #main_content_wrapper
-      width: auto
-      flex: 1
+      width: auto !important
+      flex: 1 !important
 
 .table, .attributes_table table, #main_content table
-  min-width: 400px
+  min-width: 400px !important
 
 .btn-default.active
-  color: $btn-active-color
-  background-color: $btn-active-bg
-  border-color: $btn-active-border
-  box-shadow: none
+  color: $btn-active-color !important
+  background-color: $btn-active-bg !important
+  border-color: $btn-active-border !important
+  box-shadow: none !important
   &:focus, &:hover
     color: $btn-active-color !important
     background-color: $btn-active-bg !important
   &.disabled, &[disabled], fieldset[disabled] &
-    border-color: $btn-active-disabled-bg
+    border-color: $btn-active-disabled-bg !important
     background-color: $btn-active-disabled-bg !important
     &:focus, &:hover
       background-color: $btn-active-disabled-bg !important
 
 .input-group-addon
-  color: $btn-default-color
+  color: $btn-default-color !important
   .disabled &
     border: none !important
-    background-color: $btn-default-disabled-bg
+    background-color: $btn-default-disabled-bg !important
 
 .btn
   &:focus
@@ -67,72 +69,72 @@
     background-color: $btn-default-hover-bg !important
   &.disabled, &[disabled], fieldset[disabled] &
     @include opacity(1)
-    border-color: $btn-default-disabled-bg
-    background-color: $btn-default-disabled-bg
+    border-color: $btn-default-disabled-bg !important
+    background-color: $btn-default-disabled-bg !important
     &:focus, &:hover
       background-color: $btn-default-disabled-bg !important
 
 .form-control
   &[disabled], &[readonly], fieldset[disabled] &
-    border: none
-    padding: 4px 9px
+    border: none !important
+    padding: 4px 9px !important
 
 input.form-control, .filter_form .buttons input, form .actions li input
   &[disabled]
-    color: $btn-default-color
+    color: $btn-default-color !important
     &:hover, &:focus
-      color: $btn-default-color
+      color: $btn-default-color !important
 
 // panels
 #sidebar
   .panel-body
-    padding: 10px
+    padding: 10px !important
   h3
-    font-size: 18px
-    padding-top: 9px
-    padding-bottom: 9px
-    letter-spacing: 0.2px
+    font-size: 18px !important
+    padding-top: 9px !important
+    padding-bottom: 9px !important
+    letter-spacing: 0.2px !important
   h4
-    font-size: 14px
+    font-size: 14px !important
   label
-    margin: 5px 0 0
+    margin: 5px 0 0 !important
   .form-group, .filter_form .filter_form_field, .filter_form .filter_form_field, form .inputs li, form .inputs li, .filter_form .filter_form_field, form .inputs li, .buttons
-    margin-bottom: 10px
+    margin-bottom: 10px !important
   select, textarea
-    margin-top: 10px
+    margin-top: 10px !important
   .panel_contents
     ul
-      list-style-position: inside
+      list-style-position: inside !important
 
 .panel > h3
-  font-weight: 600
+  font-weight: 600 !important
 
 .panel .panel .panel-heading
-  padding: 5px 10px
+  padding: 5px 10px !important
 
 .panel-default > .panel-heading
-  border-bottom: none
+  border-bottom: none !important
 
 .panel-footer
-  border-top: none
+  border-top: none !important
 
 ul
-  padding: 0
+  padding: 0 !important
 
 .resources
-  list-style: none
+  list-style: none !important
   li
-    display: inline
-    padding-right: 10px
+    display: inline !important
+    padding-right: 10px !important
     &:last-child
-      padding-right: 0
+      padding-right: 0 !important
     a
-      white-space: nowrap
+      white-space: nowrap !important
 
 #main_content form
-  max-width: 785px //50% of max content width
+  max-width: 785px !important //50% of max content width
   &#collection_selection //special form for active admin batch actions
-    max-width: none
+    max-width: none !important
 
 // table-tools
 
@@ -143,12 +145,12 @@ ul
 // footer
 
 #footer
-  text-align: right
-  color: $footer-color
-  background-color: transparent
-  margin-top: 50px
-  padding-top: 20px
+  text-align: right !important
+  color: $footer-color !important
+  background-color: transparent !important
+  margin-top: 50px !important
+  padding-top: 20px !important
   border-top:
-    width: 1px
-    style: solid
-    color: $marine
+    width: 1px !important
+    style: solid !important
+    color: $marine !important
